@@ -1,3 +1,7 @@
+<h1>
+	Conceptual Model
+</h1>
+
 <p>
 	As a power user, I want to search for pet friendly hotels, restaurants, and destinations for my trip.
 </p>
@@ -5,8 +9,40 @@
 	<li>Search for pet friendly destinations by location</li>
 	<li>Follow the search for destinations by pet friendly hotels</li>
 	<li>based on where I am staying, I would like to also find pet friendly restaurants</li>
-	<li>I would also like to post reviews and ratings on my experience with the places I visited </li>
+	<li>I would also like to save favorite locations to my profile to plan my trip </li>
 </ul>
+<h2>User</h2>
+	<ul>
+		<li>userId (PK)</li>
+		<li>userName</li>
+		<li>userDescription</li>
+		<li>userPetDescription</li>
+	</ul>
+<h2>Hotel</h2>
+<ul>
+	<li>hotelId (pk)</li>
+	<li>hotelLocation</li>
+	<li>hotelSaveFeature</li>
+</ul>
+<h2>Restaurants</h2>
+<ul>
+	<li>restaurantlId (pk)</li>
+	<li>restaurantLocation</li>
+	<li>restaurantSaveFeature</li>
+</ul>
+<h2>Recreation</h2>
+<ul>
+	<li>recreationId (pk)</li>
+	<li>recreationLocation</li>
+	<li>recreationSaveFeature</li>
+</ul>
+<h2>Saved Listings</h2>
+<ul>
+	<li>savedListingHotel</li>
+	<li>savedListingRestaurant</li>
+	<li>savedListingRecreation</li>
+</ul>
+<img src="Conceptual-Model-Diagram.jpg" alt="Conceptual Model Diagram" width="600 height=450" />
 <div>
 	<a href="index.php">Home</a></li>
 </div>
