@@ -28,10 +28,13 @@
 </h2>
 <ol>
 	<li>
-		navigates to website and enters a city destination
+		navigates to website and enters a city destination in a search bar
 	</li>
 	<li>
-		search returns a list of petfriendly places and things to do at the destination.
+		search returns a list of pre-populated pet friendly places and things to do at the destination.
+	</li>
+	<li>
+		Cara is able to save her favorite destinations to plan her trip
 	</li>
 </ol>
 <div>
