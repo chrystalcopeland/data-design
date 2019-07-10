@@ -5,6 +5,7 @@
 		<title>Have Dog Will Travel</title>
 	</head>
 	<body>
+		<h1>Index</h1>
 <p>
 	<ul>
 			<li><a href="persona.php">Persona</a></li>

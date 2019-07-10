@@ -34,7 +34,13 @@
 		search returns a list of pre-populated pet friendly places and things to do at the destination.
 	</li>
 	<li>
-		Cara is able to save her favorite destinations to plan her trip
+		Cara is able to save her favorite destinations to plan her trip by clicking on a star icon
+	</li>
+	<li>
+		The star is lit yellow to indicate Cara wants to visit this place and it is saved to her profile.
+	</li>
+	<li>
+		Cara can view her saved places under her profile
 	</li>
 </ol>
 <div>
