@@ -19,25 +19,21 @@ CREATE TABLE profile (
 	profilePhoto          VARCHAR(3600),
 	profileEmail          VARCHAR(128) NOT NULL,
 	profileDescription    VARCHAR(128) NOT NULL,
-	profilePetDescription VARCHAR(128)
+	profilePetDescription VARCHAR(128),
 
-	UNIQUE (profileId),
 	UNIQUE(profileEmail),
 	-- this officiates the primary key for the entity
 	PRIMARY KEY(profileId)
 );
 
--- create the tweet entity
-CREATE TABLE tweet (
+-- create destinations
+CREATE TABLE destination (
 	-- this is for yet another primary key...
-	tweetId BINARY(16) NOT NULL,
+	destinationID          BINARY(16)    NOT NULL,
 	-- this is for a foreign key
-	tweetProfileId BINARY(16) NOT NULL,
-	tweetContent VARCHAR(140) NOT NULL,
-	tweetDate DATETIME(6) NOT NULL,
+	destinationName        VARCHAR(128)  NOT NULL,
+	destinationDescription VARCHAR(3600) NOT NULL,
+	destinationLocation    VARCHAR(3600) NOT NULL
 	-- this creates an index before making a foreign key
-	INDEX(tweetProfileId),
-	-- this creates the actual foreign key relation
-	FOREIGN KEY(tweetProfileId) REFERENCES profile(profileId),
-	-- and finally create the primary key
-	PRIMARY KEY(tweetId)
+);
+
