@@ -8,7 +8,7 @@ ALTER DATABASE canderson73 CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 -- do this on live data!!!!
 
 DROP TABLE IF EXISTS `like`;
-DROP TABLE IF EXISTS tweet;
+DROP TABLE IF EXISTS destination;
 DROP TABLE IF EXISTS profile;
 
 CREATE TABLE profile (
@@ -16,7 +16,7 @@ CREATE TABLE profile (
 	-- not null means the attribute is required!
 	profileId             BINARY(16)   NOT NULL,
 	profileName           VARCHAR(128) NOT NULL,
-	profilePhoto          VARCHAR(3600),
+	profilePhoto          VARCHAR(511),
 	profileEmail          VARCHAR(128) NOT NULL,
 	profileDescription    VARCHAR(128) NOT NULL,
 	profilePetDescription VARCHAR(128),
