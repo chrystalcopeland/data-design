@@ -36,4 +36,11 @@ CREATE TABLE destination (
 	destinationLocation    VARCHAR(3600) NOT NULL
 	-- this creates an index before making a foreign key
 );
-
+CREATE TABLE `like` (
+	-- these are still foreign keys
+	likeDestinationID BINARY(16) NOT NULL,
+	likeDate DATETIME(6) NOT NULL,
+	-- index the foreign keys
+	INDEX(likeDestinationID),
+	-- create the foreign key relations
+	FOREIGN KEY(likeDestinationID) REFERENCES profile(profileId))
