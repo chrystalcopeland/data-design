@@ -37,7 +37,7 @@ CREATE TABLE destination (
 	destinationLocation    VARCHAR(3600) NOT NULL
 	-- this creates an index before making a foreign key
 );
-CREATE TABLE `destination` (
+CREATE TABLE `savedDestination` (
 	-- Capture 'saved destinations' for this user
 	savedDestinationID BINARY(16) NOT NULL,
 	-- foreign key
