@@ -40,7 +40,7 @@ CREATE TABLE destination (
 CREATE TABLE `savedDestination` (
 	-- Capture 'saved destinations' for this user
 	savedDestinationID BINARY(16) NOT NULL,
-	-- foreign ke
+	-- foreign key
 	saveDate DATETIME(6) NOT NULL,
 	-- index the foreign keys
 	INDEX(savedDestinationID),
