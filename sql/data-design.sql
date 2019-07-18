@@ -15,11 +15,12 @@ CREATE TABLE profile (
 	-- this creates the attribute for the primary key
 	-- not null means the attribute is required!
 	profileId             BINARY(16)   NOT NULL,
-	profileName           VARCHAR(128) NOT NULL,
+	-- Primary Key
+	profileName           VARCHAR(32) NOT NULL,
 	profilePhoto          VARCHAR(511),
-	profileEmail          VARCHAR(128) NOT NULL,
-	profileDescription    VARCHAR(128) NOT NULL,
-	profilePetDescription VARCHAR(128),
+	profileEmail          VARCHAR(144) NOT NULL,
+	profileDescription    VARCHAR(144) NOT NULL,
+	profilePetDescription VARCHAR(144),
 
 	UNIQUE(profileEmail),
 	-- this officiates the primary key for the entity
@@ -28,19 +29,20 @@ CREATE TABLE profile (
 
 -- create destinations
 CREATE TABLE destination (
-	-- this is for yet another primary key...
+	-- Destinations Table
 	destinationID          BINARY(16)    NOT NULL,
-	-- this is for a foreign key
+	-- this is a primary key
 	destinationName        VARCHAR(128)  NOT NULL,
 	destinationDescription VARCHAR(3600) NOT NULL,
 	destinationLocation    VARCHAR(3600) NOT NULL
 	-- this creates an index before making a foreign key
 );
-CREATE TABLE `like` (
-	-- these are still foreign keys
-	likeDestinationID BINARY(16) NOT NULL,
-	likeDate DATETIME(6) NOT NULL,
+CREATE TABLE `destination` (
+	-- Capture 'saved destinations' for this user
+	savedDestinationID BINARY(16) NOT NULL,
+	-- foreign key
+	saveDate DATETIME(6) NOT NULL,
 	-- index the foreign keys
-	INDEX(likeDestinationID),
+	INDEX(savedDestinationID),
 	-- create the foreign key relations
-	FOREIGN KEY(likeDestinationID) REFERENCES profile(profileId))
+	FOREIGN KEY(savedDestinationID) REFERENCES profile(profileId))
