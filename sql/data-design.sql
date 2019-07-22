@@ -7,7 +7,7 @@ ALTER DATABASE canderson73 CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 -- never ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever ever
 -- do this on live data!!!!
 
-DROP TABLE IF EXISTS `like`;
+DROP TABLE IF EXISTS savedDestination;
 DROP TABLE IF EXISTS destination;
 DROP TABLE IF EXISTS profile;
 
@@ -37,7 +37,7 @@ CREATE TABLE destination (
 	destinationLocation    VARCHAR(3600) NOT NULL
 	-- this creates an index before making a foreign key
 );
-CREATE TABLE `savedDestination` (
+CREATE TABLE savedDestination (
 	-- Capture 'saved destinations' for this user
 	savedDestinationID BINARY(16) NOT NULL,
 	-- foreign key
